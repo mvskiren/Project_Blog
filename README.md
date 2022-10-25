@@ -78,7 +78,6 @@ _The problem statement is something to start with, be creative and dive into the
 - ensure that the throughput of your system is not affected by **locking**, if it does, state how it would affect
 <!--me-->
 
-# Output
 
 ## Design Document
 
