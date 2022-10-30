@@ -1,0 +1,269 @@
+
+$bp-small: 320px;
+$background--section-primary: transparent;
+.homeContainer {
+  /*  layout styles  */
+  display: grid;
+  grid-template-rows: 10vh 50vh repeat(9, min-content);
+  grid-template-columns:
+    [full-start] minmax(3rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(3rem, 1fr) [full-end];
+
+  @media screen and (max-width: $bp-small) {
+    grid-template-rows: 6vh 75vh repeat(9, min-content);
+  }
+
+  &__header {
+    background-color: $background--section-primary;
+    grid-column: full-start / full-end;  
+    width: 100%;
+    height: 10vh; // earlier 100%;
+    // box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    @media screen and (max-width: $bp-small) {
+      position: inherit;
+      // position: fixed;
+      // top: 90vh;
+      // background-color: yellow;
+    }
+  }
+  &__heroBlog {
+    grid-column: center-start / center-end;
+  }
+  &__intro,
+  &__whyMynterio,
+  &__products,
+  &__finishings,
+  &__howWeDo,
+  &__testimonials,
+  &__bottomNavigation,
+  &__gallery,
+  &__contactForm,
+  &__footer {
+    display: grid;
+    grid-template-columns: inherit;
+    grid-column: full-start / full-end;
+  }
+
+  &__intro,
+  &__whyMynterio,
+  &__products,
+  &__finishings,
+  &__howWeDo,
+  &__testimonials,
+  &__contactForm,
+  &__bottomNavigation {
+    > * {
+      grid-column: center-start / center-end;
+    }
+  }
+
+  &__intro {
+    min-height: fit-content; 
+    padding: 50px 0px;
+    background-color: $background--section-primary;
+    // grid-auto-flow: row;
+    // justify-items: center;
+    
+    &__introWrapper {
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+      @media only screen and (max-width: 1000px)  {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        grid-gap: 2.5rem;
+        min-height: 1000px; // added 
+      }
+      @media only screen and (min-width: 601px) and (max-width: 1000px) {
+      
+        justify-items: center;
+        
+      }
+      // @media screen and (max-width: $bp-small) {
+      //   display: none;
+      // }
+      &__image {
+        height: 450px;
+        width: 350px;
+        position: relative;
+        z-index: 0;
+        box-shadow: 0 0 40px rgb(0 0 0 / 26%);
+        @media screen and (max-width: $bp-small) {
+          width: 250px;
+          height: 350px;
+          width: 100%;
+          height: 300px;
+          clip-path: polygon(
+            30% 0%,
+            70% 0%,
+            100% 30%,
+            100% 70%,
+            70% 100%,
+            30% 100%,
+            0% 70%,
+            0% 30%
+          );
+        }
+        > img {
+          min-width: 100%;
+          height: 100%;
+          object-fit: fill;
+          position: absolute;
+          z-index: 10;
+          top: 40px;
+          right: -67px;
+          box-shadow: 0 0 40px rgb(0 0 0 / 36%);
+          @media screen and (max-width: $bp-small) {
+            position: initial;
+            clip-path: polygon(
+              30% 0%,
+              70% 0%,
+              100% 30%,
+              100% 70%,
+              70% 100%,
+              30% 100%,
+              0% 70%,
+              0% 30%
+            );
+          }
+        }
+        &__imageBg {
+          width: 350px;
+          height: 450px;
+          background-color: #baa08f;
+          opacity: 0.6;
+          position: absolute;
+          z-index: 5;
+          box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+          @media screen and (max-width: $bp-small) {
+            display: none;
+          }
+        }
+        &__pulkaDots {
+          background-color: #fff; 
+          opacity: 1;
+          background-image: radial-gradient(#bfbfbf 0.8px, #fff 0.8px);
+          background-size: 16px 16px;
+          height: 300px;
+          width: 100px;
+          position: absolute;
+          z-index: 7;
+          right: -130px;
+          top: 100px;
+          @media screen and (max-width: $bp-small) {
+            display: none;
+          }
+        }
+      }
+      &__content {
+        // background-color: #f6f7f8;
+        min-width: 100%;
+        height: 475px;
+        padding: 10px 15px;
+        font-size: 1.6rem;
+        color: #203334; // rgb(87, 101, 102)
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        line-height: 1.2;
+
+        //   grid-column: 6 / 10;
+        p {
+          margin: 0;
+          color: rgb(87, 101, 102);
+        }
+        strong {
+          font-size: 5.6rem;
+          @media screen and (max-width: $bp-small) {
+            font-size: 2.6rem;
+            text-align: center;
+          }
+        }
+        @media screen and (max-width: $bp-small) {
+          justify-content: center;
+        }
+        @media only screen and (min-width: 601px) and (max-width: 1000px) {
+      
+         margin-top: 5rem;
+          
+        }
+      }
+    }
+  }
+
+
+.sectionHeading {
+  font-size: clamp(3rem, 4vw + 1rem, 8rem);
+  color: rgb(32, 51, 52);
+  margin: 2rem auto;
+  font-weight: 500;
+   @media screen and (max-width: $bp-small) {
+     margin-bottom: 3rem;
+   }
+  
+}
+.sectionParagraph {
+  font-size: 1.6rem;
+  font-size: clamp(1rem, 1vw + 1rem, 4rem);
+  color: rgb(154, 154, 154);
+  font-weight: 300;
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+  @media screen and (max-width: $bp-small) {
+    text-align: left;
+    max-width: 100%;
+  }
+}
+
+
+.successData{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  &__img{
+    width: 150px;
+    height: 150px;
+    @media screen and (max-width: $bp-small) {
+      width: 100px;
+    height: 100px;
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  p{
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 2;
+    padding: 1rem;
+    @media screen and (max-width: $bp-small) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@keyframes flow {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+  50% {
+    left: 100px;
+    opacity: 0.3;
+  }
+  100% {
+    left: 180px;
+    opacity: 0;
+  }
+}
+}
