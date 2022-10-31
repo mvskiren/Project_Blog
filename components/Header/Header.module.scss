@@ -52,7 +52,7 @@
       content: '';
       position: relative;
       min-width: fit-content; 
-      background-color: #ff5757;
+      background-color: hsl(0, 68%, 67%); 
       padding-bottom: 4px;
       border-radius: 10px;
       margin-top: 5px;
@@ -63,7 +63,8 @@
     button {
       border-radius: 5px;
       padding: 0.5rem 1rem;
-      background: #ff5757;
+      // background: #ff5757;
+      background: linear-gradient(to right,#fe4f70 0%,#ffa387 100%);
       border: none;
       color: white;
       cursor: pointer;

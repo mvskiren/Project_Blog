@@ -3,7 +3,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Classes from '../styles/Home.module.scss';
 import Header from '../components/Header/Header';
-import HeroBlog from '../components/Header/HeroBlog/HeroBlog';
+import HeroBlog from '../components/HeroBlog/HeroBlog';
+import PopularTags from '../components/PopularTags/PopularTags';
 
 const Home: NextPage = () => {
   return (
@@ -21,6 +22,9 @@ const Home: NextPage = () => {
         {/*******************  2 Hero Section (Blog of the day) ****************** */}
         <section className={Classes.homeContainer__heroBlog}>
           <HeroBlog />
+        </section>
+        <section className={Classes.homeContainer__popularTags}>
+          <PopularTags />
         </section>
       </div>
     </>

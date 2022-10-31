@@ -4,7 +4,7 @@ $background--section-primary: transparent;
 .homeContainer {
   /*  layout styles  */
   display: grid;
-  grid-template-rows: 10vh 50vh repeat(9, min-content);
+  grid-template-rows: 10vh 50vh 25vh repeat(9, min-content);
   grid-template-columns:
     [full-start] minmax(3rem, 1fr) [center-start] repeat(
       8,
@@ -35,7 +35,7 @@ $background--section-primary: transparent;
   &__heroBlog {
     grid-column: center-start / center-end;
   }
-  &__intro,
+  &__popularTags,
   &__whyMynterio,
   &__products,
   &__finishings,
@@ -50,7 +50,7 @@ $background--section-primary: transparent;
     grid-column: full-start / full-end;
   }
 
-  &__intro,
+  &__popularTags,
   &__whyMynterio,
   &__products,
   &__finishings,
@@ -63,14 +63,14 @@ $background--section-primary: transparent;
     }
   }
 
-  &__intro {
+  &__popularTags {
     min-height: fit-content; 
     padding: 50px 0px;
     background-color: $background--section-primary;
     // grid-auto-flow: row;
     // justify-items: center;
     
-    &__introWrapper {
+    &__popularTagsWrapper {
       display: grid; 
       grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
       @media only screen and (max-width: 1000px)  {
