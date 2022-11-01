@@ -4,7 +4,7 @@ $background--section-primary: transparent;
 .homeContainer {
   /*  layout styles  */
   display: grid;
-  grid-template-rows: 10vh 50vh 25vh repeat(9, min-content);
+  grid-template-rows: 10vh 50vh 30vh 800px 300px repeat(9, min-content);
   grid-template-columns:
     [full-start] minmax(3rem, 1fr) [center-start] repeat(
       8,
@@ -36,7 +36,8 @@ $background--section-primary: transparent;
     grid-column: center-start / center-end;
   }
   &__popularTags,
-  &__whyMynterio,
+  &__postGrid,
+  &__subscribe,
   &__products,
   &__finishings,
   &__howWeDo,
@@ -51,7 +52,8 @@ $background--section-primary: transparent;
   }
 
   &__popularTags,
-  &__whyMynterio,
+  &__postGrid,
+  &__subscribe,
   &__products,
   &__finishings,
   &__howWeDo,

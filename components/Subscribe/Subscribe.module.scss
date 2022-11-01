@@ -1,0 +1,56 @@
+.subscribeContainer{
+
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FC5C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    gap: 20px;
+    border-radius: 5px;
+    &__heading{
+        color: white;
+        font-size: 3.5rem;
+    }
+    &__subHeading{
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    &__inputFields{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        &__name, &__email{
+                & input {
+                    height: 60px;
+                    min-width: 300px;
+                    border-color: #eeeeee;
+                    font-size: 1.5rem;
+                    padding: 5px 20px; 
+                }
+        }
+        &__name{
+            & input {
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
+                
+                
+            }
+        }
+        &__button {
+            & button {
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+                border-style: solid;
+                height: 60px;
+                min-width: 200px;
+                font-size: 1.5rem;
+                background-color: black;
+                color:white;
+                border-color: transparent;
+            }
+        }
+    }
+}

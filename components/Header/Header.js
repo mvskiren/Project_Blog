@@ -16,13 +16,16 @@ function Header() {
           <li onClick={() => window.location.replace('/#services')}>Blogs</li>
           <li onClick={() => window.location.replace('/#aboutUs')}>About</li>
           <li onClick={() => window.location.replace('/#testimonials')}>
-            Engineering
+            Subscribe
           </li>
           <li onClick={() => window.location.replace('/#contactForm')}>
-            System Design
+            Trending
           </li>
           <button onClick={() => window.location.replace('/#contactForm')}>
             New Post
+          </button>
+          <button onClick={() => window.location.replace('/#contactForm')}>
+            Toggle
           </button>
         </ul>
       </nav>

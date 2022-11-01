@@ -4,7 +4,9 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
   /* background-color: #e4e6ec; */
+  /* background-color: #1f2028; */
 }
 
 a {
@@ -24,4 +26,42 @@ a {
     color: white;
     /* background: black; */
   }
+}
+
+.darkmode {
+  --color-font-one: #fafafa;
+  --color-font-two: #1a1a1c;
+  --color-font-white: #fafafa;
+  --color-font-black: #1a1a1c;
+  --color-one: #292b30;
+  --color-two: #32343a;
+  --color-three: #fafafa;
+  --color-four: #1a1a1c;
+  --color-five: #222226;
+  --color-six: #26282b;
+  --color-seven: #292b30;
+  --color-white: #fafafa;
+  --color-black: #1a1a1c;
+  --color-body: #1a1a1c;
+  --color-border-one: #303237;
+  --color-border-two: #5e6265;
+  --opacity-one: 0.8;
+  --opacity-two: 0.6;
+  --opacity-three: rgba(0, 0, 0, 0.06);
+  --opacity-four: rgba(0, 0, 0, 0.1);
+  --opacity-cover: 0.15;
+  --opacity-cover-custom: 0.1;
+  --opacity-search: rgba(0, 0, 0, 0.3);
+}
+input {
+  outline: none !important;
+  border-style: solid;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  opacity: 0.4;
+}
+button {
+  cursor: pointer;
 }

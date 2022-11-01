@@ -5,6 +5,9 @@ import Classes from '../styles/Home.module.scss';
 import Header from '../components/Header/Header';
 import HeroBlog from '../components/HeroBlog/HeroBlog';
 import PopularTags from '../components/PopularTags/PopularTags';
+import PostGrid from '../components/PostGrid/PostGrid';
+import Subscribe from '../components/Subscribe/Subscribe';
+import { hasSubscribers } from 'diagnostics_channel';
 
 const Home: NextPage = () => {
   return (
@@ -25,6 +28,12 @@ const Home: NextPage = () => {
         </section>
         <section className={Classes.homeContainer__popularTags}>
           <PopularTags />
+        </section>
+        <section className={Classes.homeContainer__postGrid}>
+          <PostGrid />
+        </section>
+        <section className={Classes.homeContainer__subscribe}>
+          <Subscribe />
         </section>
       </div>
     </>
