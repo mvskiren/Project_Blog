@@ -4,7 +4,7 @@ $background--section-primary: transparent;
 .homeContainer {
   /*  layout styles  */
   display: grid;
-  grid-template-rows: 10vh 50vh 30vh 800px 300px repeat(9, min-content);
+  grid-template-rows: 10vh 50vh 30vh 1000px 300px 300px;
   grid-template-columns:
     [full-start] minmax(3rem, 1fr) [center-start] repeat(
       8,
@@ -38,6 +38,7 @@ $background--section-primary: transparent;
   &__popularTags,
   &__postGrid,
   &__subscribe,
+  &__footer,
   &__products,
   &__finishings,
   &__howWeDo,
@@ -79,7 +80,7 @@ $background--section-primary: transparent;
         grid-template-columns: 1fr;
         justify-items: center;
         grid-gap: 2.5rem;
-        min-height: 1000px; // added 
+        // min-height: 1000px; // added 
       }
       @media only screen and (min-width: 601px) and (max-width: 1000px) {
       

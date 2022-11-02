@@ -1,0 +1,21 @@
+
+
+.footerContainer{
+    width: 100%;
+    margin-top: 80px;
+    ::before{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: '';
+        position: relative;
+        background-color: #e5e5f7;
+        width: 100vw;
+        height: 15px;
+opacity: 0.8;
+background: linear-gradient(135deg, #fafaff55 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(225deg, #fafaff 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(315deg, #fafaff55 25%, transparent 25%) 0px 0/ 22px 22px, linear-gradient(45deg, #fafaff 25%, #e5e5f7 25%) 0px 0/ 22px 22px;
+    }
+    &__heading{
+        width: 100%;
+    }
+}

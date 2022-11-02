@@ -1,0 +1,60 @@
+.postGrid{
+    &__filters{
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        gap: 100px;
+        margin-bottom: 50px;
+    }
+    &__posts{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: max-content;
+        gap: 20px;
+        &__post{
+            min-height: 300px;
+            background: #FC5C7D;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+        }
+
+    }
+    
+    &__search{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    margin: 5vh auto 0;
+    // padding: 6px 6px 6px 26px;
+    cursor: pointer;
+    border-radius: 100px;
+     background-color: #f1f1f3;
+    min-width: 500px;
+     color: gray;
+    border-style: solid;
+    border-color: transparent;
+     padding: 10px 25px;
+    font-size: 1.5rem;
+    }
+
+}
+
+.search_modal{
+    background-color: white;
+    height: 50px;
+    min-width: 500px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    border-style: solid;
+    border-color: transparent;
+    padding: 30px 35px;
+    font-size: 1.5rem;
+}

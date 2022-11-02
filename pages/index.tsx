@@ -7,7 +7,7 @@ import HeroBlog from '../components/HeroBlog/HeroBlog';
 import PopularTags from '../components/PopularTags/PopularTags';
 import PostGrid from '../components/PostGrid/PostGrid';
 import Subscribe from '../components/Subscribe/Subscribe';
-import { hasSubscribers } from 'diagnostics_channel';
+import Footer from '../components/Footer/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -34,6 +34,9 @@ const Home: NextPage = () => {
         </section>
         <section className={Classes.homeContainer__subscribe}>
           <Subscribe />
+        </section>
+        <section className={Classes.homeContainer__footer}>
+          <Footer />
         </section>
       </div>
     </>

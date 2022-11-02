@@ -4,10 +4,10 @@ function Filter() {
   return (
     <div>
       <select className={Classes.filter} name="cars" id="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+        <option value="volvo">Popularity</option>
+        <option value="saab">Recent</option>
+        <option value="mercedes">Trending</option>
+        <option value="audi">Random</option>
       </select>
     </div>
   );
