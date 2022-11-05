@@ -5,7 +5,7 @@ function Subscribe() {
     <div className={Classes.subscribeContainer}>
       <div className={Classes.subscribeContainer__heading}>Stay in Loop</div>
       <div className={Classes.subscribeContainer__subHeading}>
-        Subscribe to my newsletter for all the latest updates:
+        Subscribe to our newsletter for all the latest updates:
       </div>
       <div className={Classes.subscribeContainer__inputFields}>
         <div className={Classes.subscribeContainer__inputFields__name}>

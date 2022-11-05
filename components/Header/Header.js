@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Classes from './Header.module.scss';
 
 // import MynterioLogo from "../../Svgs/MynterioLogo";
 // import { mynterioLogo } from "../../Assets/Images";
 
 function Header() {
+  const [darkTheme, setDarkTheme] = useState(false); //
+
+  useEffect(() => {
+    document.body.style.backgroundColor = darkTheme ? '#1f2028' : 'white';
+  }, [darkTheme]);
+
   return (
     <div className={Classes.header}>
       <div className={Classes.header__logo}>
@@ -24,8 +30,13 @@ function Header() {
           <button onClick={() => window.location.replace('/#contactForm')}>
             New Post
           </button>
-          <button onClick={() => window.location.replace('/#contactForm')}>
-            Toggle
+          <button
+            onClick={() => {
+              setDarkTheme((prev) => !prev);
+              localStorage.setItem('ThemePreference', !darkTheme);
+            }}
+          >
+            Dark/Light Mode
           </button>
         </ul>
       </nav>
