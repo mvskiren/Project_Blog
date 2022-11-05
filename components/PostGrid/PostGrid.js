@@ -186,12 +186,10 @@ function PostGrid() {
           <div>
             <input
               className={Classes.search_modal}
-              autofocus
               type="text"
               name="modal_search"
               id="modal_search"
               placeholder="Search posts,tags,authors..."
-              autoFocus
               autofocus
             />
           </div>
