@@ -25,7 +25,7 @@ background: linear-gradient(135deg, #fafaff55 25%, transparent 25%) -11px 0/ 22p
         width: 80px;
         height: 80px;
         object-fit: cover;
-        animation: move 40s ease-in-out infinite;
+        animation: move 60s ease-in-out infinite;
         position: absolute;
         bottom: 5px;
     }
@@ -58,29 +58,14 @@ background: linear-gradient(135deg, #fafaff55 25%, transparent 25%) -11px 0/ 22p
 
 @keyframes move {
     0%{
-        transform: translateX(0vw);
-
+        left: 0vw;
     }
-    // 15%{
-    //     transform: translateX(10vw);
-    // }
-    // 30%{
-    //     transform: translateX(20vw);
-
-    // }
     50%{
-        transform: translateX(50vw);
-        // transform: rotateY(180deg);
+        left: 100vw;
     }
-    // 60%{
-    //     transform: translateX(50vw);
-    // }
-    // 75%{
-    //     transform: translateX(70vw);
-    // }
     100%{
-        transform: translateX(100vw);
-        // transform: scale(-1, -1);
+        left: 0vw;
+        transform: rotateY(180deg);
 
     }
 }
