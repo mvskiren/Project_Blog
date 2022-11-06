@@ -6,12 +6,11 @@ $background--section-primary: transparent;
   display: grid;
   grid-template-rows: 10vh 50vh 30vh 1500px 300px 300px;
   grid-template-columns:
-    [full-start] minmax(3rem, 1fr) [center-start] repeat(
+    [full-start] minmax(4.8rem,1fr) [center-start] repeat(
       8,
       [col-start] minmax(min-content, 14rem) [col-end]
     )
-    [center-end] minmax(3rem, 1fr) [full-end];
-
+    [center-end] minmax(4.8rem, 1fr) [full-end];
   @media screen and (max-width: $bp-small) {
     grid-template-rows: 6vh 75vh repeat(9, min-content);
   }
@@ -75,11 +74,11 @@ $background--section-primary: transparent;
     
     &__popularTagsWrapper {
       display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(56rem, 1fr));
       @media only screen and (max-width: 1000px)  {
         grid-template-columns: 1fr;
         justify-items: center;
-        grid-gap: 2.5rem;
+        grid-gap: 4rem;
         // min-height: 1000px; // added 
       }
       @media only screen and (min-width: 601px) and (max-width: 1000px) {
@@ -168,7 +167,7 @@ $background--section-primary: transparent;
         min-width: 100%;
         height: 475px;
         padding: 10px 15px;
-        font-size: 1.6rem;
+        font-size: 2.56rem;
         color: #203334; // rgb(87, 101, 102)
         display: flex;
         flex-direction: column;
@@ -181,9 +180,9 @@ $background--section-primary: transparent;
           color: rgb(87, 101, 102);
         }
         strong {
-          font-size: 5.6rem;
+          font-size: 8.96rem;
           @media screen and (max-width: $bp-small) {
-            font-size: 2.6rem;
+            font-size: 4.16rem;
             text-align: center;
           }
         }
@@ -192,7 +191,7 @@ $background--section-primary: transparent;
         }
         @media only screen and (min-width: 601px) and (max-width: 1000px) {
       
-         margin-top: 5rem;
+         margin-top: 8rem;
           
         }
       }
@@ -249,12 +248,12 @@ $background--section-primary: transparent;
     }
   }
   p{
-    font-size: 2.5rem;
+    font-size:4rem;
     text-align: center;
     line-height: 2;
-    padding: 1rem;
+    padding: 1.6rem;
     @media screen and (max-width: $bp-small) {
-      font-size: 2.4rem;
+      font-size: 3.84rem;
     }
   }
 }
