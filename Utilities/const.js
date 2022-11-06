@@ -1,4 +1,4 @@
-export let sampleResponse = [
+export const sampleResponse = [
   {
     title: 'Optimizing SSR Pages',
     authorName: 'Kiran',
@@ -65,4 +65,14 @@ consequatur beatae id doloremque!`,
     tags: ['Optimization', 'Design'],
     readTime: '',
   },
+];
+
+export const defaultPopularTags = [
+  'System Design',
+  'Front End',
+  'Back End',
+  'Performance',
+  'Databases',
+  'Design Patterns',
+  'React',
 ];

@@ -2,18 +2,13 @@ import Classes from './BlogCard.module.scss';
 
 import React from 'react';
 
-const genericDescription = `Lorem ipsum dolor sit amet consecoptimizationur adipisicing elit.
-Ducimus aperiam itaque assumenda. Natus omnis tenetur, repellendus,
-at officiis accusantium eos, et cupiditate quod labore rem expedita
-consequatur beatae id doloremque!`;
-
 function BlogCard({
-  tags = ['Optimization', 'Design'],
+  tags = ['Optimization', 'Design'], //default parameters
   imageUrl = '',
   title,
-  description = genericDescription,
+  description,
   readTime,
-  authorName,
+  authorName = '',
 }) {
   return (
     <>
