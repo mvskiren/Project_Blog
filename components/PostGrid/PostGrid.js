@@ -66,6 +66,7 @@ function PostGrid() {
               id="modal_search"
               placeholder="Search posts,tags,authors..."
               autofocus
+              autoFocus
             />
           </div>
         </Modal>

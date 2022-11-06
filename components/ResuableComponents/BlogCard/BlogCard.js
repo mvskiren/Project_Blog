@@ -23,7 +23,7 @@ function BlogCard({
         <div className={Classes.post__content}>
           <div className={Classes.post__content__tags}>
             {tags.map((item) => (
-              <li>{item}</li>
+              <li key={item}>{item}</li>
             ))}
           </div>
           <div className={Classes.post__content__heading}>{title}</div>
