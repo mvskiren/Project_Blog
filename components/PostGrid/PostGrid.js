@@ -3,6 +3,8 @@ import Classes from './PostGrid.module.scss';
 import Filter from '../Filter/Filter';
 import Modal from '../ResuableComponents/Modal/Modal';
 import SearchIcon from '../../Utilities/Icons/SearchIcon';
+import BlogCard from '../ResuableComponents/BlogCard/BlogCard';
+import { sampleResponse } from '../../Utilities/const';
 
 function PostGrid() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,144 +42,17 @@ function PostGrid() {
           </div>
         </div>
         <div className={Classes.postGrid__posts}>
-          <div className={Classes.postGrid__posts__post}>
-            {' '}
-            <div className={Classes.postGrid__posts__post__image}></div>
-            <div className={Classes.postGrid__posts__post__content}>
-              <div className={Classes.postGrid__posts__post__content__tags}>
-                <li>optimization</li> <li>design</li>
-              </div>
-              <div className={Classes.postGrid__posts__post__content__heading}>
-                Optimizing Web optimzation
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__description}
-              >
-                Lorem ipsum dolor sit amet consecoptimizationur adipisicing
-                elit. Ducimus aperiam itaque assumenda. Natus omnis tenetur,
-                repellendus, at officiis accusantium eos, et cupiditate quod
-                labore rem expedita consequatur beatae id doloremque!
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__readTime}
-              ></div>
-            </div>
-          </div>
-          <div className={Classes.postGrid__posts__post}>
-            {' '}
-            <div className={Classes.postGrid__posts__post__image}></div>
-            <div className={Classes.postGrid__posts__post__content}>
-              <div className={Classes.postGrid__posts__post__content__tags}>
-                <li>optimization</li> <li>design</li>
-              </div>
-              <div className={Classes.postGrid__posts__post__content__heading}>
-                Optimizing Web optimzation
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__description}
-              >
-                Lorem ipsum dolor sit amet consecoptimizationur adipisicing
-                elit. Ducimus aperiam itaque assumenda. Natus omnis tenetur,
-                repellendus, at officiis accusantium eos, et cupiditate quod
-                labore rem expedita consequatur beatae id doloremque!
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__readTime}
-              ></div>
-            </div>
-          </div>
-          <div className={Classes.postGrid__posts__post}>
-            {' '}
-            <div className={Classes.postGrid__posts__post__image}></div>
-            <div className={Classes.postGrid__posts__post__content}>
-              <div className={Classes.postGrid__posts__post__content__tags}>
-                <li>optimization</li> <li>design</li>
-              </div>
-              <div className={Classes.postGrid__posts__post__content__heading}>
-                Optimizing Web optimzation
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__description}
-              >
-                Lorem ipsum dolor sit amet consecoptimizationur adipisicing
-                elit. Ducimus aperiam itaque assumenda. Natus omnis tenetur,
-                repellendus, at officiis accusantium eos, et cupiditate quod
-                labore rem expedita consequatur beatae id doloremque!
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__readTime}
-              ></div>
-            </div>
-          </div>
-          <div className={Classes.postGrid__posts__post}>
-            {' '}
-            <div className={Classes.postGrid__posts__post__image}></div>
-            <div className={Classes.postGrid__posts__post__content}>
-              <div className={Classes.postGrid__posts__post__content__tags}>
-                <li>optimization</li> <li>design</li>
-              </div>
-              <div className={Classes.postGrid__posts__post__content__heading}>
-                Optimizing Web optimzation
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__description}
-              >
-                Lorem ipsum dolor sit amet consecoptimizationur adipisicing
-                elit. Ducimus aperiam itaque assumenda. Natus omnis tenetur,
-                repellendus, at officiis accusantium eos, et cupiditate quod
-                labore rem expedita consequatur beatae id doloremque!
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__readTime}
-              ></div>
-            </div>
-          </div>
-          <div className={Classes.postGrid__posts__post}>
-            {' '}
-            <div className={Classes.postGrid__posts__post__image}></div>
-            <div className={Classes.postGrid__posts__post__content}>
-              <div className={Classes.postGrid__posts__post__content__tags}>
-                <li>optimization</li> <li>design</li>
-              </div>
-              <div className={Classes.postGrid__posts__post__content__heading}>
-                Optimizing Web optimzation
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__description}
-              >
-                Lorem ipsum dolor sit amet consecoptimizationur adipisicing
-                elit. Ducimus aperiam itaque assumenda. Natus omnis tenetur,
-                repellendus, at officiis accusantium eos, et cupiditate quod
-                labore rem expedita consequatur beatae id doloremque!
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__readTime}
-              ></div>
-            </div>
-          </div>
-          <div className={Classes.postGrid__posts__post}>
-            {' '}
-            <div className={Classes.postGrid__posts__post__image}></div>
-            <div className={Classes.postGrid__posts__post__content}>
-              <div className={Classes.postGrid__posts__post__content__tags}>
-                <li>optimization</li> <li>design</li>
-              </div>
-              <div className={Classes.postGrid__posts__post__content__heading}>
-                Optimizing Web optimzation
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__description}
-              >
-                Lorem ipsum dolor sit amet consecoptimizationur adipisicing
-                elit. Ducimus aperiam itaque assumenda. Natus omnis tenetur,
-                repellendus, at officiis accusantium eos, et cupiditate quod
-                labore rem expedita consequatur beatae id doloremque!
-              </div>
-              <div
-                className={Classes.postGrid__posts__post__content__readTime}
-              ></div>
-            </div>
-          </div>
+          {sampleResponse.map((item) => (
+            <BlogCard
+              title={item.title}
+              description={item.description}
+              authorName={item.authorName}
+              readTime={item.readTime}
+              tags={item.tags}
+              imageUrl={item.imageUrl}
+              key={item.title}
+            />
+          ))}
         </div>
       </div>
       {/****** Modal *******/}
