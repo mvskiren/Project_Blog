@@ -8,7 +8,10 @@ function PopularTags() {
       <div className={Classes.popularTagsContainer__heading}>Popular Tags</div>
       <ul className={Classes.popularTagsContainer__cards}>
         {defaultPopularTags.map((tagName) => (
-          <li className={Classes.popularTagsContainer__cards__card}>
+          <li
+            key={tagName}
+            className={Classes.popularTagsContainer__cards__card}
+          >
             <span>{tagName}</span>
           </li>
         ))}
