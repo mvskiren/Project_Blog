@@ -5,6 +5,12 @@
         align-items: baseline;
         gap: 100px;
         margin-bottom: 50px;
+        &__sectionTitle{
+            margin-right: auto;
+            font-size: 1.5rem;
+            color: gray;
+            font-weight: 500;
+        }
         &__search{
             display: flex;
             align-items: baseline;
@@ -31,7 +37,6 @@
         grid-template-rows: max-content;
         gap: 20px;
     }
-    
     &__search{
     display: flex;
     align-items: center;
