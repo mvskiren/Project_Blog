@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+// import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Classes from '../styles/Home.module.scss';
@@ -9,7 +9,7 @@ import PostGrid from '../components/PostGrid/PostGrid';
 import Subscribe from '../components/Subscribe/Subscribe';
 import Footer from '../components/Footer/Footer';
 
-const Home: NextPage = () => {
+const Home = (props) => {
   return (
     <>
       <Head>
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           <PopularTags />
         </section>
         <section className={Classes.homeContainer__postGrid}>
-          <PostGrid />
+          <PostGrid posts={props.posts} />
         </section>
         <section className={Classes.homeContainer__subscribe}>
           <Subscribe />
@@ -42,5 +42,18 @@ const Home: NextPage = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const featuredPost = await fetch(
+    'https://jsonplaceholder.typicode.com/posts'
+  );
+  const response = await featuredPost.json();
+  console.log(response, 'response');
+  return {
+    props: {
+      posts: response.slice(0, 6),
+    },
+  };
+}
 
 export default Home;

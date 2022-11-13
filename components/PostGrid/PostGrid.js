@@ -6,8 +6,9 @@ import SearchIcon from '../../Utilities/Icons/SearchIcon';
 import BlogCard from '../ResuableComponents/BlogCard/BlogCard';
 import Search from '../Filters/Search/Search';
 import { sampleResponse } from '../../Utilities/const';
+import Link from 'next/link';
 
-function PostGrid() {
+function PostGrid(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {
@@ -27,15 +28,16 @@ function PostGrid() {
           </div>
         </div>
         <div className={Classes.postGrid__posts}>
-          {sampleResponse.map((item) => (
+          {props.posts.map((item) => (
             <BlogCard
               title={item.title}
-              description={item.description}
+              description={item.body}
               authorName={item.authorName}
               readTime={item.readTime}
               tags={item.tags}
               imageUrl={item.imageUrl}
               key={item.title}
+              id={item.id}
             />
           ))}
         </div>
